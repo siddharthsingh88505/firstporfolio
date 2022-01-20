@@ -1,6 +1,6 @@
 //Function for fetching api
         function getData(value){
-        fetch(' http://api.weatherapi.com/v1/current.json?q='+value+'&key=7543739a6fb342af993112945220401').then(
+        fetch(' https://api.weatherapi.com/v1/current.json?q='+value+'&key=7543739a6fb342af993112945220401').then(
             res=>{
                 if(res.ok){
                     return res.json();
