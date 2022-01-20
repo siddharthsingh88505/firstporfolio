@@ -18,7 +18,7 @@ function calculate(){
                 output.value=`${(amount*(data[to]/data[frm])).toFixed(2)}`;
             }
             else{
-            output.value=`${amount*(data[to]/data[frm]).toFixed(2)}`;
+            output.value=`${(amount*(data[to]/data[frm])).toFixed(2)}`;
             }
         })
 }
