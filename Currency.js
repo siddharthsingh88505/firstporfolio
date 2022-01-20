@@ -16,7 +16,7 @@ function calculate(){
     //Calling async function and displaying data to user
     a(frm,to).then(value=>{
         return value.rates}).then(data=>{
-            if((data[to]/data[frm]).toString().length===1){
+            if((data[frm]/data[frm]).toString().length===1){
                 output.value=`${(amount*(data[frm]/data[frm])).toFixed(2)}`;
             }
             else{
