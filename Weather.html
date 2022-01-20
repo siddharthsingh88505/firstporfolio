@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Weather.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,800;1,800&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+    <div id="container">
+        <div id="mainBox">
+            <div id="search" class="boxes"><input type="text" id="inputName" placeholder="Location..." autocomplete="off"></div>
+            <div id="cityName" class="boxes hide"><i class="fas fa-map-marker-alt"></i>&nbsp;City Name</div>
+            <div id="date" class="boxes hide">Date & Time</div>
+            <div id="temp" class="boxes hide">Temperature</div>
+            <div id="text" class="boxes">t</div>
+            <div id="humWind" class="boxes hide">
+                <div id="humidity" class="inside">Humidity</div>
+                <div id="wind" class="inside">Wind</div>
+            </div>
+        </div>
+    </div>
+    <script src="Weather.js"></script>
+</body>
+</html>

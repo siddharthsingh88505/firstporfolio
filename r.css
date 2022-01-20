@@ -1,0 +1,356 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: aquamarine;
+    user-select: none;
+    scroll-behavior: smooth;
+}
+#container{
+    display: flex;
+    height: 700vh;
+    width: 100vw;
+}
+header nav{
+    height: 10vh;
+    width: 100%;
+    background-color: rgb(11, 18, 19);
+    color: aquamarine;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+}
+main{
+    height: 680vh;
+    width: 100vw;
+    margin-top: 10vh;
+    background-color: #c1c7cc7e;
+}
+footer{
+    height: 10vh;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4vh;
+}
+span{
+    font-size: 0.8em;
+}
+a{
+    text-decoration: none;
+    color: aquamarine;
+}
+ul{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: flex-end;
+}
+li{
+    list-style: none;
+    margin: 2vh;
+    font-size: 3vh;
+}
+li:first-child{
+    position: absolute;
+    left:0;
+    font-size: 6vh;
+    font-weight: bolder;
+}
+li:hover a{
+    color: rgb(38, 221, 163);
+}
+li:hover{
+    transform: translateY(2px);
+    transition: 0.3s;
+}
+li:first-child{
+    transform: translateY(2px);
+    transition: 0.3s;
+}
+.listItem{
+    display: inline-block;
+}
+body{
+    overflow-x: hidden;
+}
+body::-webkit-scrollbar {
+    width: 5px;
+}
+main{
+    overflow-x: hidden;
+}
+   
+body::-webkit-scrollbar-track {
+   box-shadow: inset 0 0 96px rgb(12, 31, 29);
+ }
+   
+body::-webkit-scrollbar-thumb {
+   background-color: cyan;
+   outline: 1px solid slategrey;
+   border-radius: 50%;
+}
+.togglebtn{
+    
+    position: absolute;
+    top:2vh;
+    right: 5vh;
+    font-size: 6vh;
+    transition: 0.3s;
+    display: none;
+}
+main>section:first-child{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 10vh;
+    background-color: rgb(23, 39, 38);
+    color: white;
+}
+
+main>section:first-child> div:first-child{
+    font-weight: bold;
+}
+main>section:first-child> div:last-child{
+    height: 10%;
+    color: rgba(206, 114, 10, 0.925);
+}
+main>section:nth-child(2){
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 18vh;
+    background-color: white;
+}
+main>section:nth-child(2)>div{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+#img{
+    width: 20%;
+    height: 30vh;
+    box-shadow: 0 0 7px 2px grey;
+    margin-left: 3vh;
+    margin-top: 3vh;
+
+}
+#first{
+    display: flex;
+    justify-content: space-between;
+    margin-top:5%;
+    
+}
+#first>div:last-child{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: black;
+}
+#first p,#first span,#first a{
+    color: black;
+}
+span{
+    font-weight: bold;
+}
+label{
+    display: block;
+    width: 80%;
+    margin-left: 5%;
+    color:red;
+}
+meter{
+    width: 90%;
+    margin-left: 5%;
+    height: 5vh;
+    
+}
+meter::-webkit-meter-bar{
+    border-radius: 1px;
+    background-color: rgb(95, 80, 80);
+    border:2px solid white;
+}
+::-webkit-meter-optimum-value{
+    background-color: rgb(20, 65, 65);
+}
+#skill div{
+    margin-top: 5vh;
+    margin-left: 5%;
+    margin-bottom: 3vh;
+    color: black;
+    font-size: 4vh;
+    font-weight: bold;
+    text-decoration: underline rgb(27, 47, 47) 2px;
+}
+#skill{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+
+}
+#contain{
+    display: flex;
+    flex-direction: row;
+}
+#aboutme{
+    width:100%;
+    margin-top: 5vh;
+}
+#aboutme>div:first-child{
+    margin-bottom: 3vh;
+    text-decoration: underline rgb(27, 47, 47) 2px;
+}
+#aboutme>div,p{
+    color:black;
+}
+#aboutme>div:first-child{
+    font-weight: bold;
+}
+main section:nth-child(3){
+    background-color: grey;
+    height: 45vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: 15vh;
+}
+#work{
+    color: rgb(12, 17, 37);
+    font-size: 10vh;
+    font-weight: bold;
+}
+section:nth-child(4){
+    width:94%;
+    margin-left: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgb(222, 228, 222);
+}
+main section:nth-child(4)>div>p{
+    text-align: center;
+    font-size: 5vh;
+}
+main section:nth-child(4)>div:first-child{
+    margin-left: none;
+}
+section:nth-child(4) div img:hover{
+    transform: scale(1.07);
+    transition: 0.3s;
+    opacity: 0.8;
+}
+section:nth-child(4) div{
+    margin-left: 4vh;
+    margin-top: 13vh;
+}
+img{
+    border-radius: 1vh;
+    width: 40vh;
+    height: 40vh;
+}
+section:nth-child(5){
+    background-color: red;
+    margin-top: 12vh;
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    margin-left: 10vw;
+    
+}
+section:nth-child(5) div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+button{
+    margin-left: 10vw;
+}
+#show1{
+    display: none;
+}
+section:nth-child(5) h1{
+    color:black;
+}
+section:nth-child(5) h4{
+    color:rgb(121, 88, 88);
+}
+
+
+
+
+
+
+@media (max-width:900px) {
+    .listItem{
+        display: none;
+    }       
+    .togglebtn{
+        display: block;
+        
+    }
+    main>section:first-child> div:first-child{
+        font-size: 9vh;
+        width: 100%;
+    }
+    main>section:first-child> div:last-child{
+        font-size: 7vh;
+        width: 100%;
+    }
+    #contain{
+        display: flex;
+        flex-direction: column;
+    }
+    #aboutme{
+        margin-left: 5%;
+        margin-right: 5vh;
+        font-size: 4vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        line-break: auto;
+        width: 93%;
+    }
+    #aboutme>div:first-child{
+        align-items: flex-end;
+    }
+    #first{
+        flex-direction: column;
+        font-size:3vh;
+        margin-left: 5%;
+    }
+    #first #img{
+        margin-bottom: 4vh;
+        margin-left: 10vh;
+        width: 47%;
+    }
+    #mydata p{
+        margin-bottom:3vh;
+        line-break: strict;
+    }
+    #mydata ::after{
+        content: "\a";
+    }
+    main>section:nth-child(2){
+        margin-top: 10vh;
+    }
+    #serviceElement{
+        flex-direction: column;
+        align-content: center;
+        width: 80%;
+    }
+    #serviceElement div{
+        width: 60%;
+        margin-bottom: 3vh;
+        margin-top: 0;
+    }
+
+}

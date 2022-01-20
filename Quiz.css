@@ -1,0 +1,227 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    color:white;
+    user-select: none;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: rgb(42, 158, 148);
+}
+h1{
+    color: rgb(5, 11, 92);
+    font-size: 7.5vh;
+}
+
+
+#container,#hidingContainer{
+    height:70vh;
+    margin-left: 10vw;
+    margin-top: 20vh;
+    width:80vw;
+    border:1px solid navy;
+    box-shadow:0 0 34px 3px rgb(50, 41, 56);
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+    background-color:#001f3f;
+    border-radius: 3vh;
+
+}
+#hidingContainer{
+    height:70vh;
+    background-color: rgb(255, 190, 10);
+    position: absolute;
+    top:0;
+    left: 0;
+}
+#questionBar{
+    height:30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#questionNum{
+    height: 100%;
+    width:80%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+#timer{
+    height: 60%;
+    width: 10%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:5px solid white;
+    border-radius: 50%;
+}
+#question{
+    margin-top: 9vh;;
+    text-align: center;
+    height:30%;
+    color: oldlace;
+    font-size: 5vh;
+    text-shadow: 4px 1px 92px rgb(7, 36, 29);
+}
+
+.boxes{
+    width:90%;
+}
+#optionContainer{
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:3px solid orangered;
+    margin: 1.3vh;
+    border-radius: 3vh;
+    width:70%;
+}
+
+
+.options:hover{
+    background-color: rgb(255, 255, 255);
+    color:black;
+    transition: background-color 0.2.7s ease-in ;
+}
+#buttons{
+    display: flex;
+    width:60%;
+    height: 40%;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+#nextBtn{
+    border:2px solid gray;
+    border-radius: 4px;
+    background: rgba(117, 53, 44, 0);
+    box-shadow: 0 0 45px 4px rgb(12, 10, 10);
+    padding-left: 2vh;
+    padding-right: 2vh;
+}
+#nextBtn:hover,#prevBtn:hover{
+    background-color:rgb(4, 146, 4);
+    transition: background-color  ease-in;
+    transition-delay: .2;
+    transform:translate(1px,-1px);
+}
+#optionOne:hover{
+    width:50%;
+    transition:width 0.4;
+    cursor: pointer;
+}
+#optionTwo:hover{
+    width:50%;
+    transition:width 0.4;
+    cursor: pointer;
+}
+#optionThree:hover{
+    width:50%;
+    transition:width 0.4;
+    cursor: pointer;
+}
+#start{
+    background-color: rgb(51, 27, 50);
+    width: 60%;
+    height:10%;
+    border-radius: 2vh;
+    border-style: none;
+}
+#emoji{
+    font-size: 32vh;
+    color:white;
+}
+#score{
+    color:black;
+    font-size: 7vh;
+    font-weight: bold;
+    text-shadow:1px 2px 14px rgb(211, 229, 230);
+    border:3px solid rgb(66, 51, 51);
+    border-radius: 3vw;
+    padding: 5px;
+}
+#score:hover{
+    background-color:bisque;
+
+}
+p{
+    width:90%;
+    margin: 1vh;
+    border-radius: 3vh;
+    text-align: center;
+    color:red;
+    font-size: 4vh;
+    background: coral;
+}
+#emoji:hover{
+    transform: scale(1.04);
+}
+
+@media (max-width:290px) {
+    #score{
+        width:90%;
+        font-size: 4vh;
+        text-align: center;
+    }
+    h1{
+        color: rgb(5, 11, 92);
+        font-size: 5vh;
+    }
+}
+@media (max-width:190px) {
+    #score{
+        width:80%;
+        font-size: 4vh;
+        text-align: center;
+    }
+    h1{
+        color: rgb(5, 11, 92);
+        font-size: 3vh;
+    }
+    #emoji{
+        font-size: 20vh;
+        color:white;
+    }
+}
+@media (max-height:110px) {
+    
+    #score{
+        width:50vw;
+        font-size: 1vw;
+        text-align: center;
+        padding: 1px;
+    }
+    h1{
+        color: rgb(5, 11, 92);
+        font-size: 3vw;
+    }
+    #emoji{
+        font-size: 20vw;
+        color:white;
+    }
+}
+@media (min-width:89px )and (max-width:90px) {
+    #score{
+        width:90vw;
+        font-size: 1vw;
+        text-align: center;
+        padding: 1px;
+    }
+    h1{
+        color: rgb(5, 11, 92);
+        font-size: 2vw;
+    }
+}

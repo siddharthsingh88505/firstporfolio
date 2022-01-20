@@ -1,0 +1,443 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: aquamarine;
+    user-select: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+#container{
+    display: flex;
+    height: 700vh;
+    width: 100vw;
+}
+header nav{
+    height: 10vh;
+    width: 100%;
+    background-color: rgb(11, 18, 19);
+    color: aquamarine;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+}
+main{
+    height: 535vh;
+    width: 100vw;
+    background-color: #c1c7cc7e;
+}
+main::-webkit-scrollbar{
+    appearance: none;
+    display: none;
+}
+footer{
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vh;
+    text-align: center;
+    position: sticky;
+    bottom: 0;
+}
+span{
+    font-size: 0.8em;
+}
+a{
+    text-decoration: none;
+    color: aquamarine;
+}
+ul{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: flex-end;
+}
+li{
+    list-style: none;
+    margin: 2vh;
+    font-size: 3vh;
+}
+li:first-child{
+    position: absolute;
+    left:0;
+    font-size: 6vh;
+    font-weight: bolder;
+}
+li:hover a{
+    color: rgb(38, 221, 163);
+}
+li:hover{
+    transform: translateY(2px);
+    transition: 0.3s;
+}
+li:first-child{
+    transform: translateY(2px);
+    transition: 0.3s;
+}
+.listItem{
+    display: inline-block;
+}
+body{
+    overflow-x: hidden;
+    background-color: rgb(23, 39, 38);
+}
+body::-webkit-scrollbar {
+    width: 5px;
+}
+main,html{
+    overflow-x: hidden;
+}
+   
+body::-webkit-scrollbar-track {
+   box-shadow: inset 0 0 96px rgb(12, 31, 29);
+ }
+   
+body::-webkit-scrollbar-thumb {
+   background-color: cyan;
+   outline: 1px solid slategrey;
+   border-radius: 50%;
+}
+.togglebtn{
+    
+    position: absolute;
+    top:1.9vh;
+    right: 5vh;
+    font-size: 6vh;
+    transition: 0.3s;
+    display: none;
+}
+main>section:first-child{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 10vh;
+    background-color: rgb(23, 39, 38);
+    color: white;
+}
+
+main>section:first-child> div:first-child{
+    font-weight: bold;
+}
+main>section:first-child> div:last-child{
+    height: 10%;
+    color: rgba(206, 114, 10, 0.925);
+}
+main>section:nth-child(2){
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 18vh;
+    background-color: white;
+    box-shadow: 0 0 24px 2px rgb(27, 25, 25);
+}
+main>section:nth-child(2)>div{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+#img{
+    width: 20%;
+    height: 30vh;
+    box-shadow: 0 0 7px 2px grey;
+    margin-left: 3vh;
+    margin-top: 3vh;
+
+}
+span{
+    font-weight: bold;
+}
+label{
+    display: block;
+    width: 80%;
+    margin-left: 5%;
+    color:red;
+}
+meter{
+    width: 60%;
+    margin-left: 5%;
+    height: 5vh;
+    
+}
+meter:last-child{
+    margin-bottom: 5vh;
+}
+meter::-webkit-meter-bar{
+    border-radius: 1px;
+    background-color: rgb(156, 149, 149);
+    border:2px solid white;
+}
+::-webkit-meter-optimum-value{
+    background-color: rgb(20, 65, 65);
+}
+#skill div{
+    margin-top: 5vh;
+    margin-left: 5%;
+    margin-bottom: 3vh;
+    color: black;
+    font-size: 4vh;
+    font-weight: bold;
+    text-decoration: underline rgb(27, 47, 47) 2px;
+}
+#skill{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+
+}
+#contain{
+    display: flex;
+    flex-direction: row;
+}
+#aboutme{
+    width:95%;
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2.5%;
+}
+#aboutme >div{
+    text-align: center;
+}
+
+#aboutme>div:first-child{
+    margin-bottom: 3vh;
+    text-decoration: underline rgb(27, 47, 47) 2px;
+    text-align: center;
+}
+
+#aboutme>div,p{
+    color:black;
+}
+#aboutme>div:first-child{
+    font-weight: bold;
+}
+main section:nth-child(3){
+    background-color: grey;
+    height: 45vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: 15vh;
+
+}
+#work{
+    color: rgb(12, 17, 37);
+    font-size: 5vh;
+    letter-spacing: 3px;
+    font-weight: bold;
+    text-align: center;
+}
+img{
+    width: 500px;
+    height: 250px;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+section:nth-child(4){
+    width:90%;
+    margin-left: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+section:nth-child(4)>div{
+    color:red;
+    width: 40%;
+    margin:3vh;
+    box-shadow: 0 0 24px 2px rgb(27, 25, 25);
+    overflow: hidden;
+    border-radius: 1vh;
+    background-color: white;
+}
+
+section:nth-child(4)>div>div:first-child{
+    display: flex;
+    justify-content: center;
+    overflow:hidden;
+}
+section:nth-child(4)>div>div:last-child{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 20vh;
+    text-align: center;
+    margin: 3vh;
+    color:black;
+    font-size: 3vh;
+}
+img:hover{
+    transform: scale(1.3);
+    opacity: 0.6;
+    transition:all 0.5s;
+}
+section:nth-child(5){
+    height: 90vh;
+    background-color: rgb(72, 108, 156);
+    display: flex;
+    position: relative;
+}
+section:nth-child(5)>div{
+    height: 80%;
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 5%;
+    background-color: white;
+}
+
+section:nth-child(5)>div>div:last-child{
+    height: 70%;
+    width: 40%;
+    background-color: rgb(19, 19, 51);
+    position: absolute;
+    left:3%;
+    top:19%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:white
+}
+#contactMe{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left:40%;
+    margin-top:7%;
+    width: 50%;
+}
+#contactMe>div{
+    color:black;
+}
+#contact{
+    font-size: 6vh;
+}
+#contactMe >p{
+    color: grey;
+    text-align: center;
+    font-size: 2vh;
+}
+#contactMe a{
+    margin-top: 5vh;
+    color:white;
+    background-color: rgb(72, 108, 156);
+    padding: 3vh;
+    width: 10vw;
+    border-radius: 2vh;
+    box-shadow: 0 0 4px 1px rgb(168, 148, 148);
+    text-align: center;
+}
+#contactMe a:hover{
+    color:white;
+    background-color: rgb(28, 75, 28);
+    transform: scale(1.05);
+    box-shadow: 0 0 14px 1px grey;
+    transition: all 0.3s;
+}
+#contact:hover{
+    transform: scale(1.1);
+    transition:0.3s;
+}
+#socialAccounts div:first-child{
+    position: absolute;
+    top: 10%;
+}
+#socialAccounts div:first-child:hover{
+    transform: scale(1.1);
+    transition: all 0.3s;
+}
+.icon{
+    display: flex;
+}
+.social{
+    margin: 2vh;
+    font-size: 5vh;
+}
+i{
+    color: white;
+    text-align: center;
+}
+i:hover{
+    color:aquamarine;
+    transform: scale(1.1);
+    transition: all 0.3s;
+}
+
+
+@media (max-width:750px) {
+    .listItem{
+        display: none;
+    }       
+    .togglebtn{
+        display: block;
+        top:5%
+    }
+    main>section:first-child> div:first-child{
+        font-size: 9vh;
+        width: 100%;
+    }
+    main>section:first-child> div:last-child{
+        font-size: 7vh;
+        width: 100%;
+    }
+    #contain{
+        display: flex;
+        flex-direction: column;
+    }
+    #aboutme{
+        margin-left: 5%;
+        margin-right: 5vh;
+        font-size: 4vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        line-break: auto;
+        width: 93%;
+    }
+    #aboutme>div:first-child{
+        align-items: flex-end;
+    }
+
+    main>section:nth-child(2){
+        margin-top: 10vh;
+    }
+    section:nth-child(4)>div{
+        color:red;
+        width: 135%;
+        border: 2px solid black;
+        margin:3vh;
+    }
+    section:nth-child(4)>div>div:last-child{
+        height: 8vh;
+    }
+    section:nth-child(5)>div>div:last-child{
+        top:8%;
+    }
+    #contactMe{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left:45%;
+        margin-top:10%;
+        width: 50%;
+    }
+    main{
+        height: 550vh;
+    }
+}
+
+    

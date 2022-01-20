@@ -1,0 +1,89 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    user-select: none;
+    user-zoom:none;
+}
+#container{
+    height:85vh;
+    width:80%;
+    margin-top:10vh;
+    margin-left: 10vw;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#mainBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 0px 33px 3px black;
+    background: linear-gradient(74deg,cyan 6%,skyblue,white);
+    border-radius: 2vw;
+}
+#cloudLogo{
+    font-size: 10rem;
+    color: goldenrod;
+    text-shadow:1px 1px 3px black ;
+}
+#temp{
+    font-size:13vh;
+    text-align: center;
+}
+.boxes{
+    font-size:4vh ;
+    width:90%;
+    text-align: center;
+}
+#container #mainBox div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#search input{
+    width:40%;
+    height: 90%;
+    color: black;
+    background-color: inherit;
+    text-align: center;
+    border:none;
+    border-bottom: 1px solid rgb(148, 120, 120);
+    font-size: 4vh;
+    outline:none;
+}
+#search input::placeholder{
+    color: rgb(70, 12, 12);
+}
+.boxes{
+    margin:2vh;
+}
+#humWind{
+    height:10vh;
+    display: flex;
+}
+
+#humidity{
+    background-color: blue;
+}
+#wind{
+    background-color: green;
+    margin-left: 30px;
+}
+.inside{
+    padding: 4px;
+    border-radius: 2vh;
+    width:50%;
+    background: linear-gradient(to right,cyan,skyblue,white);
+    text-align: center;
+}
+input:hover{
+    cursor:pointer;
+}
+@media (max-width:500px) {
+    
+}
+#temp:hover,#cityName:hover,#date:hover,#text:hover,#humidity:hover,#wind:hover{
+    color: rgb(126, 16, 58);
+}

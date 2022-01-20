@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Generateiframe.css">
+</head>
+<body>
+    <header>
+        <div class="head">
+            <h1>Generate iFrame</h1>
+        </div>
+    </header>
+    <main>
+
+        <div class="pad">Name : <input type="text" id="name" value="myname"> </div>
+        <div class="pad"> Width : <input type="number" id="height" value="500"></div>
+        <div class="pad">Height : <input type="number" id="width" value="300"></div>
+
+        <div class="pad">pd
+            <label for="scroll">Scrollbar : </label>
+            <select name="scroll" id="scroll">
+                <option>no</option>
+                <option>yes</option>
+                <option>auto</option>
+
+            </select>
+        </div>
+        <div class="pad">
+            Margin height : <input type="text" id="marginheight" value="0px">
+        </div>
+        <div class="pad">
+            Margin width : <input type="text" id="marginwidth" value="0px">
+        </div>
+        <div>
+            <div class="pad">
+                <label for="border" class="border">Border : </label>
+                <select name="border" id="border">
+                    <option>yes</option>
+                    <option>no</option>
+
+                </select>
+                <label for="borderT" class="borderT">Border Style : </label>
+                <select name="borderT" id="borderT">
+                    <option>none</option>
+                    <option>hidden</option>
+                    <option>solid</option>
+                    <option>dotted</option>
+                    <option>dashed</option>
+                </select>
+
+                <label for="borderS" class="borderS">Border Size : </label>
+                <select name="borderS" id="borderS">
+                    <option>0</option>
+                    <option>1px</option>
+                    <option>2px</option>
+                    <option>3px</option>
+                    <option>4px</option>
+                    <option>5px</option>
+                    <option>6px</option>
+                    <option>7px</option>
+                    <option>8px</option>
+                    <option>9px</option>
+                    <option>10px</option>
+                </select>
+            </div>
+            <div>
+                <label for="borderC" class="borderC">Border color : </label> <input type="color" id="borderC">
+            </div>
+
+            <div class="pad">iFrame URL :
+                <input type="text" id="iframe" placeholder="https://">
+            </div>
+
+            <div class="main pad">
+                <button class="btn1" onclick="fun1()">&lt;/&gt; Generate code</button>
+            </div>
+            <div class="main">
+                <textarea class="main " id="code" readonly type="text" placeholder="Your code will be displayed here" style="outline:none; resize:none"></textarea>
+            </div>
+            <div class="main pad">
+                <button class="btn1" onclick="copyText()">&#10004; Copy</button>
+            </div>
+    </main>
+    <footer>
+        <div class="bottom">
+            Copyright &copy; 2021 <a href="generateiframe.com">generateiframe.com</a>
+        </div>
+    </footer>
+    <script src="Generateiframe.js"></script>
+</body>
+</html>
