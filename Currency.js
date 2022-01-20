@@ -14,7 +14,7 @@ function calculate(){
     //Calling async function and displaying data to user
     a(frm,to).then(value=>{
         return value.rates}).then(data=>{
-            console.log(data[from])
+            console.log(data[frm])
             if((data[to]/data[frm]).toString().length===1){
                 output.value=`${(amount*(data[to]/data[frm])).toFixed(2)}`;
                 console.log(data[to]);
