@@ -1,5 +1,3 @@
-//Creating Asynchronous function to fetch the data from exchangerates 
-
 let a= async function d(frm,to){
 let c = await fetch('http://api.exchangeratesapi.io/v1/latest?access_key=77bdf9458124569180fd15fdab79f07f')
 return await c.json()
@@ -18,9 +16,11 @@ function calculate(){
         return value.rates}).then(data=>{
             if((data[to]/data[frm]).toString().length===1){
                 output.value=`${(amount*(data[to]/data[frm])).toFixed(2)}`;
+                console.log(data[to]);
             }
             else{
             output.value=`${amount*(data[to]/data[frm]).toFixed(2)}`;
+            console.log(data[to]);
             }
         })
 }
