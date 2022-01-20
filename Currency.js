@@ -16,11 +16,11 @@ function calculate(){
     //Calling async function and displaying data to user
     a(frm,to).then(value=>{
         return value.rates}).then(data=>{
-            if((data[frm]/data[frm]).toString().length===1){
-                output.value=`${(amount*(data[frm]/data[frm])).toFixed(2)}`;
+            if((data[to]/data[frm]).toString().length===1){
+                output.value=`${(amount*(data[to]/data[frm])).toFixed(2)}`;
             }
             else{
-            output.value=`${amount*(data[frm]/data[frm]).toFixed(2)}`;
+            output.value=`${amount*(data[to]/data[frm]).toFixed(2)}`;
             }
         })
 }
