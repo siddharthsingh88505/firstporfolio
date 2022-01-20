@@ -1,6 +1,6 @@
 let a= async function d(frm,to){
 let c = await fetch('http://api.exchangeratesapi.io/v1/latest?access_key=77bdf9458124569180fd15fdab79f07f')
-return c.json()
+return c.json();
 }
  
 
