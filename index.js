@@ -40,6 +40,7 @@ toggleBtn.addEventListener('click',()=>{
     if(count===0){
         toggleBtn.innerHTML="&times;";
         count++;
+        console.log(count)
     }
     else{
         toggleBtn.innerHTML="&#8801;";
