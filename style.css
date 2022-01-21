@@ -507,6 +507,21 @@ i:hover{
     section:nth-child(5)>div{
         width:80%;
     }
+    #intro div{
+        font-size: 7vh;
+    }
+    #intro div:last-child{
+        font-size: 6vh;
+    }
+}
+
+@media (max-width:420px) {
+    #intro div{
+        font-size: 7vh;
+    }
+    #intro div:last-child{
+        font-size: 4vh;
+    } 
 }
 
     
