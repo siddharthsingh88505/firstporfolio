@@ -292,7 +292,7 @@ section:nth-child(5)>div{
     margin-left: 15%;
     margin-top: 5%;
     background-color: white;
-    border-radius:0.6vh;
+    border-radius: 1vh;
 }
 
 section:nth-child(5)>div>div:last-child{
@@ -307,7 +307,7 @@ section:nth-child(5)>div>div:last-child{
     justify-content: center;
     align-items: center;
     color:white;
-    border-radius:0.6vh;
+    border-radius: 1vh;
 }
 #contactMe{
     display: flex;
