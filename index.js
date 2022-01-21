@@ -29,6 +29,7 @@ let id1 = setInterval(()=>{
     x++;
     if(x===myText.length){
         x=0;
+        myE.innerHTML="";
     }
 },2500);
 
