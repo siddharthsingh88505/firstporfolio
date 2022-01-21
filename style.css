@@ -409,6 +409,10 @@ i:hover{
     color: rgb(6, 54, 38);
     font-size: 4vh;
 }
+#about{
+    border:2vh solid white;
+    border-left-color: aquamarine;
+}
 @keyframes move {
     0%{
         height: 0vh;
