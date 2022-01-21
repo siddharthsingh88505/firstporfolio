@@ -22,7 +22,6 @@ header nav{
     z-index: 2;
 }
 main{
-    height: 535vh;
     width: 100vw;
     background-color: #c1c7cc7e;
 }
@@ -38,8 +37,6 @@ footer{
     align-items: center;
     font-size: 3vh;
     text-align: center;
-    position: sticky;
-    bottom: 0;
 }
 span{
     font-size: 0.8em;
