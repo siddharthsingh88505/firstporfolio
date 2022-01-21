@@ -19,6 +19,7 @@ function typeWriter(param){
         y++;
         if(y===param.length){
             clearInterval(id2);
+            myE.innerHTML="";
         }
     },100)
     
