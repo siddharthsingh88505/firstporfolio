@@ -1,4 +1,4 @@
-var viewMode = getCookie("view-mode");
+var viewMode = document.cookie("view-mode");
 if(viewMode == "desktop"){
     viewport.setAttribute('content', 'width=1024');
 }else if (viewMode == "mobile"){
