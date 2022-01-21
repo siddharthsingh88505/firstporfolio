@@ -457,6 +457,9 @@ i:hover{
         width: 80%;
         
     }
+    section:nth-child(5)>div:first-child{
+        width:80%;
+    }
 }
 
     
