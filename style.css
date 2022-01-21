@@ -288,7 +288,7 @@ section:nth-child(5){
 }
 section:nth-child(5)>div{
     height: 80%;
-    width: 70%;
+    width: 80%;
     margin-left: 15%;
     margin-top: 5%;
     background-color: white;
