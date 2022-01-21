@@ -203,8 +203,16 @@ meter::-webkit-meter-bar{
 #aboutme >div{
     text-align: center;
 }
-#aboutme >div >div:nth-child(2) p{
-    font-size: 2vh;
+#intro div{
+    font-size: 8vh;
+}
+#intro div:last-child{
+    font-size: 7vh;
+}
+#aboutme >div:nth-child(2) p,#aboutme >div:nth-child(3) p{
+    font-size: 3vh;
+    font-style: italic;
+    color: rgb(28, 46, 46);
 }
 
 #aboutme>div:first-child{
