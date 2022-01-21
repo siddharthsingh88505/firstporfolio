@@ -423,8 +423,21 @@ i:hover{
     section:nth-child(4)>div>div:last-child{
         height: 8vh;
     }
-    section:nth-child(5)>div>div:last-child{
-        top:8%;
+    #socialAccounts>div:first-child{
+        text-align: center;
+    }
+    .icon{
+        margin-top: 15vh;
+        flex-direction: column;
+    }
+    #contactMe{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left:35%;
+        margin-top:10%;
+        width: 50%;
     }
     #contactMe{
         display: flex;
