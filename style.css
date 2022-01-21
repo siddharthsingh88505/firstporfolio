@@ -306,7 +306,8 @@ section:nth-child(5)>div>div:last-child{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color:white
+    color:white;
+    border-radius:0.6vh;
 }
 #contactMe{
     display: flex;
