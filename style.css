@@ -385,6 +385,42 @@ i:hover{
     transform: scale(1.1);
     transition: all 0.3s;
 }
+#last{
+    position: fixed;
+    overflow: hidden;
+    height: 0vh;
+    width: 100%;
+    background-color: rgba(52, 76, 87, 0.89);
+    top:10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    animation: move 0.2s ease-in 0s 1 forwards ;
+    display: none;
+}
+#last a{
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 2.6vh;
+}
+#last a:hover{
+    background-color: white;
+    color: rgb(6, 54, 38);
+    font-size: 4vh;
+}
+@keyframes move {
+    0%{
+        height: 0vh;
+    }
+    50%{
+        height: 12vh;
+    }
+    100%{
+        height: 22vh;
+    }
+}
+
 
 
 @media (max-width:750px) {

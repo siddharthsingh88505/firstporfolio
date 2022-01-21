@@ -1,13 +1,3 @@
-var viewMode = document.cookie.split("view-mode");
-setInterval(()=>{
-if(viewMode == "desktop"){
-    viewport.setAttribute('content', 'width=102');
-    console.log('pc')
-}else if (viewMode == "mobile"){
-    console.log('mobile')
-    viewport.setAttribute('content', 'width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no');
-}},1000)
-
 let myText =
 ["Developer!","Designer!","Programmer!","Freelancer!"];
 let myE = document.querySelector('main>section:first-child div:last-child')
@@ -19,7 +9,6 @@ function typeWriter(param){
         y++;
         if(y===param.length){
             clearInterval(id2);
-            myE.innerHTML="";
         }
     },100)
     
@@ -35,20 +24,24 @@ let id1 = setInterval(()=>{
 },2500);
 
 let toggleBtn = document.getElementsByClassName('togglebtn')[0];
+let toggleContainer = document.getElementById('last');
+let a = document.querySelectorAll('#last a');
+for(let x of a){
+x.addEventListener('click',()=>{
+    toggleBtn.innerHTML="&#8801;";
+    toggleContainer.style.display="none"; 
+})
+}
 let count = 0;
 toggleBtn.addEventListener('click',()=>{
     if(count===0){
         toggleBtn.innerHTML="&times;";
+        toggleContainer.style.display="flex";
         count++;
-        console.log(count)
     }
     else{
         toggleBtn.innerHTML="&#8801;";
+        toggleContainer.style.display="none";
         count--;
     }
-})
-
-let img = document.getElementsByTagName('img')[0];
-img.addEventListener('hover',()=>{
-    console.log('hobver')
 })
