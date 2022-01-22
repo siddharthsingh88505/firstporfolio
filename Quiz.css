@@ -38,7 +38,6 @@ h1{
     left: 0;
 }
 #questionBar{
-    height:30vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -62,7 +61,7 @@ h1{
     border-radius: 50%;
 }
 #question{
-    margin-top: 9vh;;
+    margin-top: 6vh;;
     text-align: center;
     height:30%;
     color: oldlace;
@@ -74,7 +73,7 @@ h1{
     width:90%;
 }
 #optionContainer{
-    margin-top: 5vh;
+    margin-top: 4vh;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -112,25 +111,19 @@ h1{
     padding-left: 2vh;
     padding-right: 2vh;
 }
-#nextBtn:hover,#prevBtn:hover{
+#nextBtn:hover{
     background-color:rgb(4, 146, 4);
     transition: background-color  ease-in;
     transition-delay: .2;
     transform:translate(1px,-1px);
 }
 #optionOne:hover{
-    width:50%;
-    transition:width 0.4;
     cursor: pointer;
 }
 #optionTwo:hover{
-    width:50%;
-    transition:width 0.4;
     cursor: pointer;
 }
 #optionThree:hover{
-    width:50%;
-    transition:width 0.4;
     cursor: pointer;
 }
 #start{

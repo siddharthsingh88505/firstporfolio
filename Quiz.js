@@ -7,13 +7,19 @@ let option1 = document.getElementById('optionOne');
 let option2 = document.getElementById('optionTwo');
 let option3 = document.getElementById('optionThree');
 let nextBtn = document.getElementById('nextBtn');
-// let prevBtn = document.getElementById('prevBtn');
+
 let start = document.getElementById('start')
 
 
 //Creating a question array
-let quesArray = ["Who is Prime minister of India ?","What is the Name of National flag of India ?"]
-
+let quesArray = ["Who is Prime minister of India ?","What is the Name of National flag of India ?","Who is Defence Minister of India?"]
+let btnCount=0;
+nextBtn.addEventListener('click',()=>{
+    nextBtn.style.backgroundColor="green";
+    setTimeout(()=>{
+        nextBtn.style.backgroundColor="initial";
+    },100)   
+})
 //Creating function for adding question to the question array
 function addQues(ques){
     quesArray[quesArray.length]=ques;
@@ -27,7 +33,9 @@ function addAns(...ques){
     ansArray[ansArray.length]=ques;
 }
 addAns("Tiranga","Triman","Taiwaran");
+addAns("Ram Nath Kovind","Raj Nath Singh","Amit Shah")
 
+let answer = ["Narendra modi","Tiranga","Raj Nath Singh"]
 //Result array
 var result=0;
 
@@ -56,12 +64,6 @@ function changeQues(){
     }
 }
 
-function prevQues(){
-    console.log(questionCount)
-    if(questionCount>0){
-       
-    }
-}
 
 changeQues();
 
@@ -70,11 +72,6 @@ nextBtn.addEventListener('click',()=>{
  
 })
 
-// prevBtn.addEventListener('click',()=>{
-//     timer.innerText="";
-//     prevQues();
- 
-// })
 
 start.addEventListener('click',(e)=>{
     document.getElementById('hidingContainer').style.display="none";
@@ -96,16 +93,77 @@ start.addEventListener('click',()=>{
         counter++;
     }, 1000);
 })
+
+function search(n){
+    for(let x of answer){
+        if(n===x){
+            return true;
+        }
+    }
+}
+
 option1.addEventListener('click',()=>{
-    result=result+5;
-    changeQues();
+    if(search(option1.innerText)){
+        option1.style.borderColor="green";
+        result=result+5;
+        setTimeout(()=>{
+        option1.style.borderColor="";
+        changeQues();
+        option1.style.backgroundColor="inherit";
+        option1.style.color="white";
+        },200);
+    }
+    else{
+        option1.style.borderColor="red";
+        setTimeout(() => {
+        option1.style.borderColor="";
+        changeQues();
+        option1.style.backgroundColor="inherit";
+        option1.style.color="white";
+        }, 1000);
+    }
     
 });
-option2.addEventListener('click',changeQues);
-option3.addEventListener('click',changeQues);
-
-option2.addEventListener('click',changeQues);
-option3.addEventListener('click',changeQues);
+option2.addEventListener('click',()=>{
+    if(search(option2.innerText)){
+        option2.style.borderColor="green";
+        setTimeout(()=>{
+        option2.style.borderColor="";
+        changeQues();
+        option2.style.backgroundColor="inherit";
+        option2.style.color="white";
+        },200);
+    }
+    else{
+        option2.style.borderColor="red";
+        setTimeout(() => {
+        option2.style.borderColor="";
+        changeQues();
+        option2.style.backgroundColor="inherit";
+        option2.style.color="white";
+        }, 1000);
+    }
+});
+option3.addEventListener('click',()=>{
+    if(search(option3.innerText)){
+        option3.style.borderColor="green";
+        setTimeout(()=>{
+        option3.style.borderColor="";
+        changeQues();
+        option3.style.backgroundColor="inherit";
+        option3.style.color="white";
+        },200);
+    }
+    else{
+        option3.style.borderColor="red";
+        setTimeout(() => {
+        option3.style.borderColor="";
+        changeQues();
+        option3.style.backgroundColor="initial";
+        option3.style.color="white";
+        }, 1000);
+    }
+});
 function hideOnEnd(){
     clearInterval(id);
     let c =document.getElementById('container');
