@@ -142,7 +142,7 @@ option2.addEventListener('click',()=>{
         changeQues();
         option2.style.backgroundColor="inherit";
         option2.style.color="white";
-        }, 1000);
+        }, 200);
     }
 });
 option3.addEventListener('click',()=>{
