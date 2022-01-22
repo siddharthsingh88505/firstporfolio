@@ -105,7 +105,7 @@ function search(n){
 option1.addEventListener('click',()=>{
     if(search(option1.innerText)){
         option1.style.borderColor="green";
-        result=result+5;
+        result=result+1;
         setTimeout(()=>{
         option1.style.borderColor="";
         changeQues();
@@ -127,6 +127,7 @@ option1.addEventListener('click',()=>{
 option2.addEventListener('click',()=>{
     if(search(option2.innerText)){
         option2.style.borderColor="green";
+        result=result+1;
         setTimeout(()=>{
         option2.style.borderColor="";
         changeQues();
@@ -147,6 +148,7 @@ option2.addEventListener('click',()=>{
 option3.addEventListener('click',()=>{
     if(search(option3.innerText)){
         option3.style.borderColor="green";
+        result=result+1;
         setTimeout(()=>{
         option3.style.borderColor="";
         changeQues();
