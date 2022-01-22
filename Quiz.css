@@ -34,7 +34,7 @@ h1{
     height:70vh;
     background-color: rgb(255, 190, 10);
     position: absolute;
-    top:10vh;
+    top:0;
     left: 0;
 }
 #questionBar{
