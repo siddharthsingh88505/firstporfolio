@@ -19,7 +19,6 @@ body{
     justify-content: center;
 }
 #mainBox{
-    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -50,7 +49,7 @@ body{
     align-items: center;
 }
 #search input{
-    width:40%;
+    width:60%;
     height: 90%;
     color: black;
     background-color: inherit;
