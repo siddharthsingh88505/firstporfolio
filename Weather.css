@@ -72,7 +72,9 @@
     margin-left: 30px;
 }
 .inside{
-    padding: 4px;
+    height: 8vh;
+    font-size: 2vh;
+    padding: 2px;
     border-radius: 2vh;
     width:50%;
     background: linear-gradient(to right,cyan,skyblue,white);
