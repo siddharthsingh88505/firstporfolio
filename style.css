@@ -215,7 +215,7 @@ meter::-webkit-meter-bar{
 #aboutme >div:nth-child(2) p,#aboutme >div:nth-child(3) p{
     font-size: 3vh;
     font-style: italic;
-    color: rgb(28, 46, 46);
+    color: rgb(22, 53, 53);
 }
 
 #aboutme>div:first-child{
