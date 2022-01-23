@@ -6,6 +6,9 @@
     user-select: none;
     user-zoom:none;
 }
+body{
+    background-color: rgb(96, 96, 223);
+}
 #container{
     height:85vh;
     width:80%;
