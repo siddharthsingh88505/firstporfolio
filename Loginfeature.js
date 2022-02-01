@@ -147,7 +147,7 @@ function loginUser(email,password){
   .then((user) => {
     // Signed in 
     localStorage.setItem('id',user.user.uid);
-    location.href='index.html';   
+    location.replace('index.html');   
     
   })
   .catch((error) => {
@@ -180,7 +180,7 @@ signInGoogleOne.addEventListener('click',()=>{
     // The signed-in user info.
     const user = result.user;
     localStorage.setItem('id',user.uid);
-    location.href='index.html';
+    location.replace('index.html');
     store(user.uid,user.displayName,user.email);
         
     // ...
@@ -216,7 +216,7 @@ signInGoogleTwo.addEventListener('click',()=>{
      
      if(user.emailVerified){
       localStorage.setItem('id',user.uid);
-      location.href='index.html';
+      location.replace('index.html');
       store(user.uid,user.displayName,user.email);
      }
      // ...
