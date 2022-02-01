@@ -243,7 +243,3 @@ function store(user,name,email,contact="",password=""){
     Password:password
   })
 }
-document.getElementsByTagName('input').addEventListener('keypress',()=>{
-  document.querySelector('#Container0>p').style.display="none";
-  document.querySelector('#signUpContainer>p').style.display="none";
-})
