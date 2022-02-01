@@ -193,13 +193,7 @@ signInGoogleOne.addEventListener('click',()=>{
     const user = result.user;
     localStorage.setItem('id',user.uid);
     location.href='index.html';
-    
-      store(user.uid,user.displayName,user.email);
-        document.querySelector('#Container1').style.display="none";
-        document.querySelector('#Container0').id="welcome";
-        document.getElementById('welcome').innerHTML="Welcome, "+user.displayName;
-
-    // ...
+    store(user.uid,user.displayName,user.email);
   }).catch((error) => {
     // Handle Errors here.
     const errorCode = error.code;
@@ -215,7 +209,7 @@ signInGoogleOne.addEventListener('click',()=>{
 }
 else{
   document.querySelector('#Container0>p').style.display="block";
-    document.querySelector('#Container0>p').innerHTML=`&#9888; &nbsp; Please, check your connection`;
+  document.querySelector('#Container0>p').innerHTML=`&#9888; &nbsp; Please, check your connection`;
 }
 
 })
@@ -234,10 +228,6 @@ signInGoogleTwo.addEventListener('click',()=>{
       localStorage.setItem('id',user.uid);
       location.href='index.html';
       store(user.uid,user.displayName,user.email);
-         EMAIL=user.uid;
-         document.querySelector('#Container1').style.display="none";
-         document.querySelector('#signUpContainer').id="welcome";
-         document.getElementById('welcome').innerHTML="Welcome, "+user.displayName;
      }
      // ...
    }).catch((error) => {
