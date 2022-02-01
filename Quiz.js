@@ -172,12 +172,12 @@ option3.addEventListener('click',()=>{
     }
 });
 function hideOnEnd(){
-    clearInterval(id);
+    
     let c =document.getElementById('container');
     c.style.background=`orange`
     c.innerHTML=`<h1>Completed</h1><div id="enjoy">&#127881;</div><div id='score'>Score =>${result}</div>`;
     let num = Number(`${window.getComputedStyle(c).width}`)
     document.getElementById('enjoy').style.fontSize="18vh"
     document.getElementById('enjoy').style.textAlign='center'
-    
+    clearInterval(id);
 }
