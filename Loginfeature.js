@@ -95,8 +95,8 @@ for(let x of listOfInput){
     })
     x.addEventListener('mouseenter',()=>{
       if(window.innerWidth<701){
-      document.querySelector('#Container0 .inputEye div>i').style.top='45%';
-      document.querySelector('#signUpContainer .inputEye div>i').style.top='45%';
+      document.querySelector('#Container0 .inputEye div>i').style.top='50%';
+      document.querySelector('#signUpContainer .inputEye div>i').style.top='50%';
       }
     }) 
     x.addEventListener('mouseout',()=>{
