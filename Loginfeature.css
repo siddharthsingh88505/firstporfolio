@@ -152,7 +152,6 @@ i{
 #Container0 .inputEye div>i,#signUpContainer .inputEye div>i{
     color: black;
     position: absolute;
-    top: 55%;
     right: 12%;
 }
 input{
@@ -172,9 +171,6 @@ input{
         display: flex;
         justify-content: center;
         align-items: center;
-    }
-    #Container0 .inputEye div>i,#signUpContainer .inputEye div>i{
-        top: 55%;
     }
 }
 @media (min-width:0px) {

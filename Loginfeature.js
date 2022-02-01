@@ -92,8 +92,15 @@ for(let x of listOfInput){
    x.addEventListener('keypress',()=>{
     document.querySelector('#signUpContainer>p').style.display="none";
     document.querySelector('#Container0>p').style.display="none";
-    
-}) 
+    })
+    x.addEventListener('click',()=>{
+      document.querySelector('#Container0 .inputEye div>i').style.top='50%';
+      document.querySelector('#signUpContainer .inputEye div>i').style.top='50%';
+    }) 
+    x.addEventListener('mouseput',()=>{
+      document.querySelector('#Container0 .inputEye div>i').style.top='55%';
+      document.querySelector('#signUpContainer .inputEye div>i').style.top='55%';
+    }) 
 }
 
 const listOfBtn = document.getElementsByClassName('btn');
