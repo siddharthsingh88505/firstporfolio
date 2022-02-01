@@ -148,15 +148,7 @@ function loginUser(email,password){
     // Signed in 
     localStorage.setItem('id',user.user.uid);
     location.href='index.html';   
-    for(let x=0;x<user.user.email.length;x++){
-        if(user.user.email[x]==="." || user.user.email[x]==="@"){
-            document.querySelector('#Container1').style.display="none";
-            document.querySelector('#Container0').id="welcome";
-            document.getElementById('welcome').innerHTML="Welcome, "+user.user.email.slice(0,x);
-            break;
-         
-       }
-    }
+    
   })
   .catch((error) => {
     document.querySelector('#Container0>p').innerHTML=`&#9888; &nbsp;User not found`;
@@ -177,7 +169,6 @@ else{
 import { GoogleAuthProvider, signInWithPopup, signInWithRedirect, getRedirectResult, signOut } from "https://www.gstatic.com/firebasejs/9.6.4/firebase-auth.js";
 
 const provider = new GoogleAuthProvider(firebaseApp);
-var EMAIL;
 signInGoogleOne.addEventListener('click',()=>{
     //for pop-up
     if(navigator.onLine){
@@ -190,12 +181,8 @@ signInGoogleOne.addEventListener('click',()=>{
     const user = result.user;
     localStorage.setItem('id',user.uid);
     location.href='index.html';
-    
-      store(user.uid,user.displayName,user.email);
-        document.querySelector('#Container1').style.display="none";
-        document.querySelector('#Container0').id="welcome";
-        document.getElementById('welcome').innerHTML="Welcome, "+user.displayName;
-
+    store(user.uid,user.displayName,user.email);
+        
     // ...
   }).catch((error) => {
     // Handle Errors here.
@@ -231,10 +218,6 @@ signInGoogleTwo.addEventListener('click',()=>{
       localStorage.setItem('id',user.uid);
       location.href='index.html';
       store(user.uid,user.displayName,user.email);
-         EMAIL=user.uid;
-         document.querySelector('#Container1').style.display="none";
-         document.querySelector('#signUpContainer').id="welcome";
-         document.getElementById('welcome').innerHTML="Welcome, "+user.displayName;
      }
      // ...
    }).catch((error) => {
@@ -260,4 +243,7 @@ function store(user,name,email,contact="",password=""){
     Password:password
   })
 }
-
+document.getElementsByTagName('input').addEventListener('keypress',()=>{
+  document.querySelector('#Container0>p').style.display="none";
+  document.querySelector('#signUpContainer>p').style.display="none";
+})
