@@ -98,7 +98,7 @@ for(let x of listOfInput){
 
 const listOfBtn = document.getElementsByClassName('btn');
 for(let y of listOfBtn){
-    y.addEventListener('mouseover',()=>{
+    y.addEventListener('mouseenter',()=>{
         y.style.backgroundColor=`rgb(59, 71, 122)`;
         y.style.color='wheat';
         y.style.transition="0.6s";
