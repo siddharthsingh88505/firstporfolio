@@ -158,7 +158,7 @@ function loginUser(email,password){
   .then((user) => {
     // Signed in 
     localStorage.setItem('id',user.user.uid);
-    location.href='index.html';   
+    location.replace(localStorage.getItem('href'));   
     
   })
   .catch((error) => {
@@ -180,7 +180,6 @@ else{
 import { GoogleAuthProvider, signInWithPopup, signInWithRedirect, getRedirectResult, signOut } from "https://www.gstatic.com/firebasejs/9.6.4/firebase-auth.js";
 
 const provider = new GoogleAuthProvider(firebaseApp);
-var EMAIL;
 signInGoogleOne.addEventListener('click',()=>{
     //for pop-up
     if(navigator.onLine){
@@ -192,7 +191,7 @@ signInGoogleOne.addEventListener('click',()=>{
     // The signed-in user info.
     const user = result.user;
     localStorage.setItem('id',user.uid);
-    location.href='index.html';
+    location.replace(localStorage.getItem('href')); 
     store(user.uid,user.displayName,user.email);
   }).catch((error) => {
     // Handle Errors here.
@@ -226,7 +225,7 @@ signInGoogleTwo.addEventListener('click',()=>{
      
      if(user.emailVerified){
       localStorage.setItem('id',user.uid);
-      location.href='index.html';
+      location.replace(localStorage.getItem('href')); 
       store(user.uid,user.displayName,user.email);
      }
      // ...
