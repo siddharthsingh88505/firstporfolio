@@ -98,7 +98,7 @@ for(let x of listOfInput){
 
 const listOfBtn = document.getElementsByClassName('btn');
 for(let y of listOfBtn){
-    y.addEventListener('mouseenter',()=>{
+    y.addEventListener('mouseover',()=>{
         y.style.backgroundColor=`rgb(59, 71, 122)`;
         y.style.color='wheat';
         y.style.transition="0.6s";
@@ -147,8 +147,16 @@ function loginUser(email,password){
   .then((user) => {
     // Signed in 
     localStorage.setItem('id',user.user.uid);
-    location.replace('index.html');   
-    
+    location.href='index.html';   
+    for(let x=0;x<user.user.email.length;x++){
+        if(user.user.email[x]==="." || user.user.email[x]==="@"){
+            document.querySelector('#Container1').style.display="none";
+            document.querySelector('#Container0').id="welcome";
+            document.getElementById('welcome').innerHTML="Welcome, "+user.user.email.slice(0,x);
+            break;
+         
+       }
+    }
   })
   .catch((error) => {
     document.querySelector('#Container0>p').innerHTML=`&#9888; &nbsp;User not found`;
@@ -169,6 +177,7 @@ else{
 import { GoogleAuthProvider, signInWithPopup, signInWithRedirect, getRedirectResult, signOut } from "https://www.gstatic.com/firebasejs/9.6.4/firebase-auth.js";
 
 const provider = new GoogleAuthProvider(firebaseApp);
+var EMAIL;
 signInGoogleOne.addEventListener('click',()=>{
     //for pop-up
     if(navigator.onLine){
@@ -180,9 +189,13 @@ signInGoogleOne.addEventListener('click',()=>{
     // The signed-in user info.
     const user = result.user;
     localStorage.setItem('id',user.uid);
-    location.replace('index.html');
-    store(user.uid,user.displayName,user.email);
-        
+    location.href='index.html';
+    
+      store(user.uid,user.displayName,user.email);
+        document.querySelector('#Container1').style.display="none";
+        document.querySelector('#Container0').id="welcome";
+        document.getElementById('welcome').innerHTML="Welcome, "+user.displayName;
+
     // ...
   }).catch((error) => {
     // Handle Errors here.
@@ -216,8 +229,12 @@ signInGoogleTwo.addEventListener('click',()=>{
      
      if(user.emailVerified){
       localStorage.setItem('id',user.uid);
-      location.replace('index.html');
+      location.href='index.html';
       store(user.uid,user.displayName,user.email);
+         EMAIL=user.uid;
+         document.querySelector('#Container1').style.display="none";
+         document.querySelector('#signUpContainer').id="welcome";
+         document.getElementById('welcome').innerHTML="Welcome, "+user.displayName;
      }
      // ...
    }).catch((error) => {
@@ -241,5 +258,19 @@ function store(user,name,email,contact="",password=""){
     Email:email.toLowerCase(),
     Contact:contact,
     Password:password
+  })
+}
+
+let eye = document.querySelectorAll('.inputEye div>i');
+for(let x of eye){
+  x.addEventListener('click',()=>{
+    if(document.querySelector('#signUpContainer .inputEye input').type==="password" || document.querySelector('#Container0 .inputEye input').type==="password"){
+      document.querySelector('#signUpContainer .inputEye input').type="text";
+      document.querySelector('#Container0 .inputEye input').type="text";
+    }
+    else{
+      document.querySelector('#signUpContainer .inputEye input').type="password";
+      document.querySelector('#Container0 .inputEye input').type="password"
+    }
   })
 }

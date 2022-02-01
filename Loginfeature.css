@@ -46,14 +46,13 @@ input,#Container0>div:first-child,#signUpContainer>div:first-child{
 }
 p{
     margin-top: 1vh;
-    margin-left: 3vw;
+    margin-left: 2vw;
     font-size: 14px;
     width: 80%;
     color: rgb(238, 14, 14);
     padding-left: 8vh;
     border-radius: 13vh;
     display: none;
-    text-align: center;
 }
 input{
     outline: none;
@@ -91,7 +90,7 @@ div{
     background-color: rgb(59, 71, 122);
     color: white;
     cursor: pointer;
-    transition: 0.2s;
+    transition: 0.3s;
 }
 #Container1{
     width: 60vw;
@@ -146,6 +145,21 @@ i{
 
 }
 
+
+.inputEye{
+    position: relative;
+}
+#Container0 .inputEye div>i,#signUpContainer .inputEye div>i{
+    color: black;
+    position: absolute;
+    top: 55%;
+    right: 12%;
+}
+input{
+    text-decoration: none;
+}
+
+
 @media (max-width:700px){
     #Container0,#signUpContainer{
         width: 90vw;
@@ -159,10 +173,19 @@ i{
         justify-content: center;
         align-items: center;
     }
+    #Container0 .inputEye div>i,#signUpContainer .inputEye div>i{
+        top: 55%;
+    }
+}
+@media (min-width:0px) {
+    #Container0 .inputEye div>i,#signUpContainer .inputEye div>i{
+        top: 55%;
+    }
 }
 @media (max-width:300px){
     .btn{
         width: 80%;
         margin-left: 10%;
     }
+
 }
