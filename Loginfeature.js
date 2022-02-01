@@ -93,11 +93,11 @@ for(let x of listOfInput){
     document.querySelector('#signUpContainer>p').style.display="none";
     document.querySelector('#Container0>p').style.display="none";
     })
-    x.addEventListener('click',()=>{
+    x.addEventListener('mouseenter',()=>{
       document.querySelector('#Container0 .inputEye div>i').style.top='50%';
       document.querySelector('#signUpContainer .inputEye div>i').style.top='50%';
     }) 
-    x.addEventListener('mouseput',()=>{
+    x.addEventListener('mouseout',()=>{
       document.querySelector('#Container0 .inputEye div>i').style.top='55%';
       document.querySelector('#signUpContainer .inputEye div>i').style.top='55%';
     }) 
@@ -155,15 +155,7 @@ function loginUser(email,password){
     // Signed in 
     localStorage.setItem('id',user.user.uid);
     location.href='index.html';   
-    for(let x=0;x<user.user.email.length;x++){
-        if(user.user.email[x]==="." || user.user.email[x]==="@"){
-            document.querySelector('#Container1').style.display="none";
-            document.querySelector('#Container0').id="welcome";
-            document.getElementById('welcome').innerHTML="Welcome, "+user.user.email.slice(0,x);
-            break;
-         
-       }
-    }
+    
   })
   .catch((error) => {
     document.querySelector('#Container0>p').innerHTML=`&#9888; &nbsp;User not found`;
