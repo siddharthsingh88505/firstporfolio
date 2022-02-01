@@ -1,4 +1,4 @@
-let id = setInterval(()=>{
+let id1 = setInterval(()=>{
     if(!localStorage.id){
         location.replace('Loginfeature.html');
     }
