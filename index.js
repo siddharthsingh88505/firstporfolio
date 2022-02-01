@@ -2,7 +2,7 @@ let id = setInterval(()=>{
     if(!localStorage.id){
         location.href='Loginfeature.html';
     }
-},10);
+},0);
 
 let myText =
 ["Developer!","Designer!","Programmer!","Freelancer!"];
