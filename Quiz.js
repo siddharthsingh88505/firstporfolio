@@ -87,9 +87,9 @@ start.addEventListener('mouseover',()=>{
 start.addEventListener('mouseout',()=>{
     start.style.backgroundColor=`rgb(51, 27, 50)`;
 })
-var id;
+
 start.addEventListener('click',()=>{
-    id=setInterval(() => {
+    var id=setInterval(() => {
         timer.innerHTML=`${counter}`;
         if(counter===15){
             changeQues();
