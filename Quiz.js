@@ -1,8 +1,8 @@
-let id1 = setInterval(()=>{
-    if(!localStorage.id){
-        location.replace('Loginfeature.html');
-    }
-},0);
+// let id1 = setInterval(()=>{
+//     if(!localStorage.id){
+//         location.replace('Loginfeature.html');
+//     }
+// },0);
 //Getting all the necessary elements
 let questionNum = document.getElementById('questionNum');
 let spanNum = document.getElementById('spanNum');
