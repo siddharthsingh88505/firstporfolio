@@ -1,3 +1,8 @@
+let id = setInterval(()=>{
+    if(!localStorage.id){
+        location.href='Loginfeature.html';
+    }
+},0);
 //Function for fetching api
         function getData(value){
         fetch(' https://api.weatherapi.com/v1/current.json?q='+value+'&key=7543739a6fb342af993112945220401').then(

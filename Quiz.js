@@ -1,3 +1,8 @@
+let id = setInterval(()=>{
+    if(!localStorage.id){
+        location.href='Loginfeature.html';
+    }
+},0);
 //Getting all the necessary elements
 let questionNum = document.getElementById('questionNum');
 let spanNum = document.getElementById('spanNum');

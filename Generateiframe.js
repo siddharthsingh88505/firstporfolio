@@ -1,3 +1,8 @@
+let id = setInterval(()=>{
+    if(!localStorage.id){
+        location.href='Loginfeature.html';
+    }
+},0);
 function fun1() {
     let iframe = document.getElementById("iframe").value; let borderS = document.getElementById("borderS").value;
     let borderC = document.getElementById("borderC").value; let borderT = document.getElementById("borderT").value;
