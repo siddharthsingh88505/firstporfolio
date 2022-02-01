@@ -94,12 +94,16 @@ for(let x of listOfInput){
     document.querySelector('#Container0>p').style.display="none";
     })
     x.addEventListener('mouseenter',()=>{
+      if(window.innerWidth<701){
       document.querySelector('#Container0 .inputEye div>i').style.top='50%';
       document.querySelector('#signUpContainer .inputEye div>i').style.top='50%';
+      }
     }) 
     x.addEventListener('mouseout',()=>{
+      if(window.innerWidth<701){
       document.querySelector('#Container0 .inputEye div>i').style.top='55%';
       document.querySelector('#signUpContainer .inputEye div>i').style.top='55%';
+      }
     }) 
 }
 
