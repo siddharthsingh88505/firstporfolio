@@ -46,13 +46,14 @@ input,#Container0>div:first-child,#signUpContainer>div:first-child{
 }
 p{
     margin-top: 1vh;
-    margin-left: 2vw;
+    margin-left: 3vw;
     font-size: 14px;
     width: 80%;
     color: rgb(238, 14, 14);
     padding-left: 8vh;
     border-radius: 13vh;
     display: none;
+    text-align: center;
 }
 input{
     outline: none;
