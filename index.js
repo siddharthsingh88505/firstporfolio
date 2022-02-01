@@ -1,3 +1,9 @@
+let id = setInterval(()=>{
+    if(!localStorage.id){
+        location.href='Loginfeature.html';
+    }
+},1000);
+
 let myText =
 ["Developer!","Designer!","Programmer!","Freelancer!"];
 let myE = document.querySelector('main>section:first-child div:last-child')
@@ -43,5 +49,11 @@ toggleBtn.addEventListener('click',()=>{
         toggleBtn.innerHTML="&#8801;";
         toggleContainer.style.display="none";
         count--;
+    }
+})
+document.getElementById('logout').addEventListener('click',()=>{
+    if(localStorage.getItem('id')){
+        localStorage.removeItem('id');
+
     }
 })

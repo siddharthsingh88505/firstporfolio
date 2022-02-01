@@ -40,6 +40,14 @@ footer{
     align-items: center;
     font-size: 3vh;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+footer div:first-child span:hover{
+    color:rgba(19, 144, 194, 0.589);
+    transition: 0.2s;
 }
 span{
     font-size: 0.8em;
