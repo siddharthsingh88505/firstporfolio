@@ -1,6 +1,6 @@
 let id = setInterval(()=>{
     if(!localStorage.id){
-        location.href='Loginfeature.html';
+        location.replace('Loginfeature.html');
     }
 },0);
 function fun1() {
