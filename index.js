@@ -3,7 +3,9 @@ let id = setInterval(()=>{
         location.replace('Loginfeature.html');
     }
 },0);
-
+document.getElementById('logout').addEventListener('click',()=>{
+    localStorage.removeItem('id');
+})
 let myText =
 ["Developer!","Designer!","Programmer!","Freelancer!"];
 let myE = document.querySelector('main>section:first-child div:last-child')
@@ -49,11 +51,5 @@ toggleBtn.addEventListener('click',()=>{
         toggleBtn.innerHTML="&#8801;";
         toggleContainer.style.display="none";
         count--;
-    }
-})
-document.getElementById('logout').addEventListener('click',()=>{
-    if(localStorage.getItem('id')){
-        localStorage.removeItem('id');
-
     }
 })
