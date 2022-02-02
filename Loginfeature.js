@@ -38,7 +38,6 @@ joinNow.addEventListener('click',()=>{
 
 function signUpUser(){
     var email = document.querySelector('#signUpContainer>input:nth-child(5)').value;
-    console.log(document.querySelector('input:nth-child(1)'))
     var password = document.querySelector('input:nth-child(1)').value;
     var name = document.querySelector('#signUpContainer>input:nth-child(3)').value;
     var phoneNumber = document.querySelector('#signUpContainer>input:nth-child(4)').value;
@@ -47,7 +46,7 @@ function signUpUser(){
     const emailValidate = /^([a-zA-Z0-9/.-]+)@([a-zA-Z0-9/.-]+).([a-zA-Z]{2,20})(.[a-zA-Z])?$/;
     const nameValidate = /[a-zA-Z]{4,30}/;
   
-    if((email && password )&& (name && phoneNumber)){
+    if(email && password && name && phoneNumber){
       if(navigator.onLine){
         document.querySelector('#signUpContainer>p').style.display="none";
         if(pattern.test(phoneNumber) && phoneNumber.toString().length===10 && emailValidate.test(email) && nameValidate.test(name)){
@@ -83,7 +82,6 @@ function signUpUser(){
         }
      }
     else{
-      console.log('clicked')
         document.querySelector('#signUpContainer>p').style.display='block';
         document.querySelector('#signUpContainer>p').innerHTML=`&#9888; &nbsp; Please, provide below details`;
     }
@@ -96,8 +94,8 @@ for(let x of listOfInput){
     })
     x.addEventListener('mouseenter',()=>{
       if(window.innerWidth<701){
-      document.querySelector('#Container0 .inputEye div>i').style.top='45%';
-      document.querySelector('#signUpContainer .inputEye div>i').style.top='45%';
+      document.querySelector('#Container0 .inputEye div>i').style.top='50%';
+      document.querySelector('#signUpContainer .inputEye div>i').style.top='50%';
       }
     }) 
     x.addEventListener('mouseout',()=>{
