@@ -126,40 +126,42 @@ function addAll(){
             circle[c].style.backgroundImage='url("icon-check.svg"),linear-gradient(to right bottom,white 6%,rgb(58, 72, 133),rgb(47, 63, 63),rgb(9, 48, 48))';
             circle[c].style.backgroundRepeat='no-repeat';
             circle[c].style.backgroundSize='contain';
+            setTimeout(()=>{
                 let item = todoItems[c].querySelector('.todo-text').innerText;
-            get(child(ref(db),localStorage.id+"/active/")).then((snapshot)=>{
-                if(snapshot.exists()){
-                  let temp = snapshot.val().active;
-                  let index = temp.indexOf(item);
-                  console.log(item)
-                  console.log(temp)
-                  console.log(index)
-                  console.log(temp[index])
-                  //Onclick we need to transfer the particular item into completed array
-                  completed(item);
-                  
-                  console.log(item)
-                  //Noe we need to update active array
-                  let newTemp=[];
-                  for(let x of temp){
-                      if(x!==item){
-                          newTemp.push(x);
+                get(child(ref(db),localStorage.id+"/active/")).then((snapshot)=>{
+                    if(snapshot.exists()){
+                      let temp = snapshot.val().active;
+                      let index = temp.indexOf(item);
+                      console.log(item)
+                      console.log(temp)
+                      console.log(index)
+                      console.log(temp[index])
+                      //Onclick we need to transfer the particular item into completed array
+                      completed(item);
+                      
+                      console.log(item)
+                      //Noe we need to update active array
+                      let newTemp=[];
+                      for(let x of temp){
+                          if(x!==item){
+                              newTemp.push(x);
+                          }
                       }
-                  }
-                  update(ref(db,localStorage.id+"/active/"),{
-                      active:newTemp
-                })
-                  //Now update the item container
-                  onValue(ref(db,localStorage.id+"/active/"),snapshot=>{
-                    setContainer();
-                  });
-            
-                }
-              }).catch(error=>{
-                  console.log(error);
-              })
-            })
-        }
+                      update(ref(db,localStorage.id+"/active/"),{
+                          active:newTemp
+                    })
+                      //Now update the item container
+                      onValue(ref(db,localStorage.id+"/active/"),snapshot=>{
+                        setContainer();
+                      });
+                
+                    }
+                  }).catch(error=>{
+                      console.log(error);
+                  })
+            },100)
+               
+        })
     }
 
 function completed(value){
@@ -256,3 +258,4 @@ document.getElementsByClassName('active')[0].addEventListener('click',()=>{
     document.getElementsByClassName('completed')[0].style.color="rgb(184, 180, 180)";
     document.getElementsByClassName('clearCompleted')[0].style.color="rgb(184, 180, 180)";
 })
+}
