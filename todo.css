@@ -101,6 +101,7 @@ background-color: rgb(67, 85, 136);
     padding-left: 2vh;
     color:white;
     min-height: 50px;
+    width: 100%;
     display: flex;
     align-items: center;
 }
