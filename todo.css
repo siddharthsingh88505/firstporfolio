@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Balsamiq Sans', cursive;
+    user-select: none;
+}
+.background-image img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    object-fit: cover;
+    object-position: left;
+    width:100%;
+    height: 30vh;
+    max-height: 700px;
+    z-index: -1;
+}
+.container{
+    width: 80vw;
+    margin-left: 10vw;
+    margin-top: 5vh;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+.theme{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header-title{
+    color:white;
+    font-weight: bold;
+    font-size: 40px;
+    letter-spacing: 0.4vh;
+}
+.new-todo-item{
+    display: flex;
+    height: 60px;
+    margin-top: 4vh;
+    border-radius: 5px;
+    background-color: hsl(235, 24%, 19%);
+}
+.check-mark{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+.check{
+    border: 2px solid hsl(233,14%,35%);
+    height: 23px;
+    width: 23px;
+    border-radius: 50%;
+    margin-left: 5px;
+}
+.input-new-todo{
+    flex-grow: 1;
+    height: 100%;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+}
+input{
+    width: 70vw;
+    height: 40px;
+    outline: none;
+    border: none;
+    padding-left: 2vh;
+    border-radius: 5px;
+    background-color: hsl(235, 24%, 19%);
+    color:white;
+    letter-spacing: 1px;
+}
+.items-container{
+    margin-top: 3vh;
+    background-color: hsl(235,24%,19%);
+    border-radius: 6px;
+    box-shadow: 0px 2px 30px 0px rgba(0,0,0,0.4);
+    max-height: 63vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    scroll-behavior: smooth;
+}
+.items-container::-webkit-scrollbar{
+    width:4px;
+}
+.items-container::-webkit-scrollbar-thumb{
+background-color: rgb(67, 85, 136);
+}
+.todo-items{
+    display: flex;
+    align-items: center;
+}
+
+.todo-items .todo-text{
+    padding-left: 2vh;
+    color:white;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+}
+.todo-items:hover{
+    transform: translateY(-2px);
+    box-shadow: 0px 0px 7px 0px hsl(235, 21%, 11%);
+    overflow: hidden;
+    transition:all 0.25s;
+}
+.todo-items:hover .todo-text{
+    color: rgb(196, 138, 31);
+    transition:all 0.25s;
+}
+.status-bar{
+    width: 80vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 1vh;
+    color:rgb(184, 180, 180);
+    background-color: hsl(235, 24%, 19%);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.clearCompleted{
+    padding-right: 13px;
+}
+.status-bar >div:hover{
+    color:red;
+}
+
+@media (max-width:500px) {
+    .status-bar{
+        font-size: 13px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+   }
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="todo.css">
+<script>
+    localStorage.setItem('href',"todo.html");
+    if(!localStorage.id){
+        location.replace('Loginfeature.html');
+    }
+</script>
+</head>
+<body>
+    <div class="background-image">
+        <img src="bg-desktop-dark.jpg" alt="background-image">
+    </div>
+    <div class="container">
+        <div class="header">
+            <div class='header-title'>
+                TODO
+            </div>
+            <div class="theme">
+                <img src="icon-sun.svg" alt="">
+            </div>
+        </div>
+
+        <div class="new-todo-item">
+            <div class="check-mark">
+                <div class="check">
+
+                </div>
+            </div>
+            <div class="input-new-todo">
+                <div class="input">
+                    <form onsubmit="myf(event)">
+                    <input type="text" placeholder="Add new todo..">
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <div class="items-container">
+
+        </div>
+
+        <div class="status-bar">
+            <div class="active">active</div>
+            <div class="completed">completed</div>   
+            <div class="clearCompleted">clear completed</div>
+        </div>
+        
+    </div>
+    <script src="todo.js" type="module"></script>
+</body>
+</html>
