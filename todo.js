@@ -163,6 +163,11 @@ function completed(value){
             completed:temp 
           });
         }
+        else{
+            set(ref(db,localStorage.id+"/completed/"),{
+                completed:[value] 
+            });
+        }
         }
         else{
             set(ref(db,localStorage.id+"/completed/"),{
@@ -207,17 +212,12 @@ document.getElementsByClassName('completed')[0].addEventListener('click',()=>{
 })
 
 function clearCompleted(){
-    set(ref(db,localStorage.id+"/completed/"),{
+    update(ref(db,localStorage.id+"/completed/"),{
         completed:""
-      }).then(()=>{
-        inputText.value="";
-        console.log('Submitted SuccessFully');
-        onValue(ref(db,localStorage.id+"/"),snapshot=>{
-            setContainerCompleted();
-          });
-        
-            
       })
+      onValue(ref(db,localStorage.id+"/completed/"),snapshot=>{
+            setContainer();
+        });
 }
 
 document.getElementsByClassName('clearCompleted')[0].addEventListener('click',()=>{
@@ -225,6 +225,11 @@ document.getElementsByClassName('clearCompleted')[0].addEventListener('click',()
     document.getElementsByClassName('active')[0].style.color="rgb(184, 180, 180)";
     document.getElementsByClassName('completed')[0].style.color="rgb(184, 180, 180)";
     document.getElementsByClassName('clearCompleted')[0].style.color="red";
+    setTimeout(()=>{
+        document.getElementsByClassName('active')[0].style.color="red";
+        document.getElementsByClassName('completed')[0].style.color="rgb(184, 180, 180)";
+        document.getElementsByClassName('clearCompleted')[0].style.color="rgb(184, 180, 180)";
+    },100)
 })
 
 document.getElementsByClassName('active')[0].addEventListener('click',()=>{
