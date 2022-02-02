@@ -127,7 +127,7 @@ function addAll(){
                   console.log(index)
                   console.log(temp[index])
                   //Onclick we need to transfer the particular item into completed array
-                  completed(temp[index]);
+                  completed(item);
                   
                   console.log(item)
                   //Noe we need to update active array
