@@ -48,7 +48,9 @@ inputText.addEventListener('keydown',(e)=>{
         document.querySelector('.check').style.backgroundRepeat="no-repeat";
         document.querySelector('.check').style.backgroundSize="contain";
         if(inputText.value.trim()){
-        getData();        
+            setTimeout(()=>{
+                getData();
+            },100)        
         }
     }
     
@@ -183,12 +185,7 @@ function completed(value){
         }
         
     })
-    let circle = document.querySelectorAll('.todo-items .check');
-    for(let c of circle){
-        c.style.backgroundImage='url("icon-check.svg"),linear-gradient(to right bottom,white 6%,rgb(58, 72, 133),rgb(47, 63, 63),rgb(9, 48, 48))';
-            c.style.backgroundRepeat='no-repeat';
-            c.style.backgroundSize='contain';
-    }
+    
 }
 
 function setContainerCompleted(){
