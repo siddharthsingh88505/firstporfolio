@@ -120,12 +120,12 @@ function addAll(){
         y.addEventListener('click',()=>{
             setTimeout(()=>{
               y.style.backgroundColor="linear-gradient(to right bottom,cyan,white,red)"
-                let item = x.querySelector('.todo-text').innerText;
+                let item = x.querySelector('.todo-text')[0].innerText;
             get(child(ref(db),localStorage.id+"/active/")).then((snapshot)=>{
                 if(snapshot.exists()){
                   let temp = snapshot.val().active;
                   let index = temp.indexOf(item);
-                  console.log(index)
+                  console.log(temp[index])
                   //Onclick we need to transfer the particular item into completed array
                   completed(temp[index]);
                   
