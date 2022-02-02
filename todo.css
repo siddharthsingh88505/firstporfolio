@@ -131,6 +131,9 @@ background-color: rgb(67, 85, 136);
 .status-bar >div:hover{
     color:red;
 }
+.active{
+    color:red;
+}
 
 @media (max-width:500px) {
     .status-bar{

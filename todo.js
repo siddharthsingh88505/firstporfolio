@@ -179,11 +179,12 @@ function completed(value){
           set(ref(db,localStorage.id+"/completed/"),{
             completed:temp 
           });
-        }else{
+        }
+        }
+        else{
             set(ref(db,localStorage.id+"/completed/"),{
                 completed:[value] 
             });
-        }
         }
         
     })
@@ -216,9 +217,9 @@ function setContainerCompleted(){
 }
 
 document.getElementsByClassName('completed')[0].addEventListener('click',()=>{
-    document.getElementsByClassName('active').style.color="rgb(184, 180, 180)";
-    document.getElementsByClassName('completed').color="red";
-    document.getElementsByClassName('clearCompleted').color="rgb(184, 180, 180)";
+    document.getElementsByClassName('active')[0].style.color="rgb(184, 180, 180)";
+    document.getElementsByClassName('completed')[0].color="red";
+    document.getElementsByClassName('clearCompleted')[0].color="rgb(184, 180, 180)";
     setContainerCompleted();
 })
 
@@ -238,14 +239,14 @@ function clearCompleted(){
 
 document.getElementsByClassName('clearCompleted')[0].addEventListener('click',()=>{
     clearCompleted();
-    document.getElementsByClassName('active').style.color="rgb(184, 180, 180)";
-    document.getElementsByClassName('completed').color="rgb(184, 180, 180)";
-    document.getElementsByClassName('clearCompleted').color="red";
+    document.getElementsByClassName('active')[0].style.color="rgb(184, 180, 180)";
+    document.getElementsByClassName('completed')[0].style.color="rgb(184, 180, 180)";
+    document.getElementsByClassName('clearCompleted')[0].style.color="red";
 })
 
 document.getElementsByClassName('active')[0].addEventListener('click',()=>{
     setContainer();
-    document.getElementsByClassName('active').style.color="red";
-    document.getElementsByClassName('completed').color="rgb(184, 180, 180)";
-    document.getElementsByClassName('clearCompleted').color="rgb(184, 180, 180)";
+    document.getElementsByClassName('active')[0].style.color="red";
+    document.getElementsByClassName('completed')[0].style.color="rgb(184, 180, 180)";
+    document.getElementsByClassName('clearCompleted')[0].style.color="rgb(184, 180, 180)";
 })
