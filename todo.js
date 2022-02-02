@@ -44,12 +44,15 @@ inputText.addEventListener('keydown',(e)=>{
     
     if(e.key==="Enter"){
         e.preventDefault();
+        document.querySelector('.check').style.backgroundImage='url("icon-check.svg"),linear-gradient(to right bottom,white 6%,rgb(58, 72, 133),rgb(47, 63, 63),rgb(9, 48, 48))';
+        document.querySelector('.check').style.backgroundRepeat="no-repeat";
+        document.querySelector('.check').style.backgroundSize="contain";
         if(inputText.value.trim()){
         getData();        
         }
     }
     
-})
+}) 
 function getData(){
 get(child(ref(db),localStorage.id+"/active/")).then((snapshot)=>{
     if(snapshot.exists()){
@@ -58,6 +61,7 @@ get(child(ref(db),localStorage.id+"/active/")).then((snapshot)=>{
       temp.push(inputText.value.trim());
       let updatedValue = temp;
       store(updatedValue);
+      document.querySelector('.check').style.backgroundImage=""
       }
 
     }
@@ -117,6 +121,9 @@ function addAll(){
     let circle = document.querySelectorAll('.todo-items .check');
     for(let c=0;c<todoItems.length;c++){
         circle[c].addEventListener('click',()=>{
+            circle[c].style.backgroundImage='url("icon-check.svg"),linear-gradient(to right bottom,white 6%,rgb(58, 72, 133),rgb(47, 63, 63),rgb(9, 48, 48))';
+            circle[c].style.backgroundRepeat='no-repeat';
+            circle[c].style.backgroundSize='contain';
                 let item = todoItems[c].querySelector('.todo-text').innerText;
             get(child(ref(db),localStorage.id+"/active/")).then((snapshot)=>{
                 if(snapshot.exists()){
@@ -176,6 +183,12 @@ function completed(value){
         }
         
     })
+    let circle = document.querySelectorAll('.todo-items .check');
+    for(let c of circle){
+        c.style.backgroundImage='url("icon-check.svg"),linear-gradient(to right bottom,white 6%,rgb(58, 72, 133),rgb(47, 63, 63),rgb(9, 48, 48))';
+            c.style.backgroundRepeat='no-repeat';
+            c.style.backgroundSize='contain';
+    }
 }
 
 function setContainerCompleted(){
@@ -188,7 +201,7 @@ function setContainerCompleted(){
               if(temp[x]){
               newInnerHtml+=`<div class="todo-items">
               <div class="todo-check-mark">
-                  <div class="check">
+                  <div class="check setCompleted">
   
                   </div>
               </div>
@@ -199,9 +212,17 @@ function setContainerCompleted(){
               }
           }   
           document.querySelector('.items-container').innerHTML=newInnerHtml;
-          
+          tickes()
         }
     })
+}
+function tickes(){
+    let tick = document.getElementsByClassName('setCompleted');
+    for(let x of tick){
+        x.style.backgroundImage='url("icon-check.svg"),linear-gradient(to right bottom,white 6%,rgb(58, 72, 133),rgb(47, 63, 63),rgb(9, 48, 48))';
+        x.style.backgroundRepeat='no-repeat';
+        x.style.backgroundSize='contain';
+    }
 }
 
 document.getElementsByClassName('completed')[0].addEventListener('click',()=>{

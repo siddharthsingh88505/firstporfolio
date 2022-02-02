@@ -115,6 +115,10 @@ background-color: rgb(67, 85, 136);
     color: rgb(196, 138, 31);
     transition:all 0.25s;
 }
+.todo-check-mark .check{
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .status-bar{
     width: 80vw;
     display: flex;
