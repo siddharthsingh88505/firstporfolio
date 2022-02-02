@@ -38,14 +38,13 @@ joinNow.addEventListener('click',()=>{
 
 function signUpUser(){
     var email = document.querySelector('#signUpContainer>input:nth-child(5)').value;
-    var password = document.querySelector('input:nth-child(1)').value;
+    var password = document.querySelector('#signUpContainer input:nth-child(1)').value;
     var name = document.querySelector('#signUpContainer>input:nth-child(3)').value;
     var phoneNumber = document.querySelector('#signUpContainer>input:nth-child(4)').value;
     //Creating user with email and password
     const pattern = /^([6-9][0-9]{9})$/;
     const emailValidate = /^([a-zA-Z0-9/.-]+)@([a-zA-Z0-9/.-]+).([a-zA-Z]{2,20})(.[a-zA-Z])?$/;
     const nameValidate = /[a-zA-Z]{4,30}/;
-  
     if(email && password && name && phoneNumber){
       if(navigator.onLine){
         document.querySelector('#signUpContainer>p').style.display="none";
@@ -58,11 +57,9 @@ function signUpUser(){
             Email:email.toLowerCase(),
             Password:password
           }).then(()=>{
-              setTimeout(()=>{
                   document.querySelector('#Container1').style.display="flex";
                   document.getElementById('Container0').style.display="flex";
                   document.getElementById('signUpContainer').style.display="none";
-              },200)
             
           })
         }).catch((error) => {
