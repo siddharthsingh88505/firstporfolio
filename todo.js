@@ -58,6 +58,9 @@ inputText.addEventListener('keydown',(e)=>{
 function getData(){
 get(child(ref(db),localStorage.id+"/active/")).then((snapshot)=>{
     if(snapshot.exists()){
+        document.querySelector('.check').style.backgroundImage='url("icon-check.svg"),linear-gradient(to right bottom,white 6%,rgb(58, 72, 133),rgb(47, 63, 63),rgb(9, 48, 48))';
+        document.querySelector('.check').style.backgroundRepeat="no-repeat";
+        document.querySelector('.check').style.backgroundSize="contain";
       let temp = snapshot.val().active;
       if(!temp.includes(inputText.value)){
       temp.push(inputText.value.trim());
