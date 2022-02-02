@@ -114,37 +114,27 @@ function setContainer(){
 
 function addAll(){
     let todoItems = document.getElementsByClassName('todo-items');
-    for(let x of todoItems){
-        let circle = document.querySelectorAll('.todo-items .check')
-        for(let y of circle){
-        y.addEventListener('click',()=>{
-            setTimeout(()=>{
-              y.style.backgroundColor="linear-gradient(to right bottom,cyan,white,red)"
-                let item = x.querySelector('.todo-text')[0].innerText;
+    let circle = document.querySelectorAll('.todo-items .check');
+    for(let c=0;c<todoItems.length;c++){
+        circle[c].addEventListener('click',()=>{
+                let item = todoItems[c].querySelector('.todo-text').innerText;
             get(child(ref(db),localStorage.id+"/active/")).then((snapshot)=>{
                 if(snapshot.exists()){
                   let temp = snapshot.val().active;
                   let index = temp.indexOf(item);
+                  console.log(item)
+                  console.log(temp)
+                  console.log(index)
                   console.log(temp[index])
                   //Onclick we need to transfer the particular item into completed array
                   completed(temp[index]);
                   
-
+                  console.log(item)
                   //Noe we need to update active array
                   let newTemp=[];
-                  for(let x=0;x<temp.length;x++){
-                      if(x===index){
-                          continue;
-                      }
-                      else if(x===index && x==0){
-                        if(temp[x]){
-                            newTemp.push(temp[x]);
-                        }
-                      }
-                      else{
-                          if(temp[x]){
-                              newTemp.push(temp[x]);
-                          }
+                  for(let x of temp){
+                      if(x!==item){
+                          newTemp.push(x);
                       }
                   }
                   update(ref(db,localStorage.id+"/active/"),{
@@ -159,21 +149,14 @@ function addAll(){
               }).catch(error=>{
                   console.log(error);
               })
-            },200)
-            
-
-        })
+            })
+        }
     }
-    }
-}
 
 function completed(value){
     get(child(ref(db),localStorage.id+"/completed/")).then((snapshot)=>{
-        console.log("yess")
         if(snapshot.exists()){
-            console.log('first')
             if(snapshot.val().completed){
-                console.log('second')
           let temp = snapshot.val().completed;
           temp.push(value);
           set(ref(db,localStorage.id+"/completed/"),{
