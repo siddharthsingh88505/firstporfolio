@@ -25,7 +25,6 @@ const signInGoogleOne = document.getElementsByClassName('btn')[1];
 const joinNow = document.querySelector('#Container1 div');
 const signUp = document.getElementsByClassName('btn')[2];
 const signInGoogleTwo = document.getElementsByClassName('btn')[3];
-console.log(joinNow);
 //Click listener on join now for signing up
 joinNow.addEventListener('click',()=>{
     document.querySelector('#Container1').style.display="none";
@@ -39,7 +38,8 @@ joinNow.addEventListener('click',()=>{
 
 function signUpUser(){
     var email = document.querySelector('#signUpContainer>input:nth-child(5)').value;
-    var password = document.querySelector('input:nth-child(6)').value;
+    console.log(document.querySelector('input:nth-child(1)'))
+    var password = document.querySelector('input:nth-child(1)').value;
     var name = document.querySelector('#signUpContainer>input:nth-child(3)').value;
     var phoneNumber = document.querySelector('#signUpContainer>input:nth-child(4)').value;
     //Creating user with email and password
@@ -47,7 +47,7 @@ function signUpUser(){
     const emailValidate = /^([a-zA-Z0-9/.-]+)@([a-zA-Z0-9/.-]+).([a-zA-Z]{2,20})(.[a-zA-Z])?$/;
     const nameValidate = /[a-zA-Z]{4,30}/;
   
-    if(email && password && name && phoneNumber){
+    if((email && password )&& (name && phoneNumber)){
       if(navigator.onLine){
         document.querySelector('#signUpContainer>p').style.display="none";
         if(pattern.test(phoneNumber) && phoneNumber.toString().length===10 && emailValidate.test(email) && nameValidate.test(name)){
@@ -83,6 +83,7 @@ function signUpUser(){
         }
      }
     else{
+      console.log('clicked')
         document.querySelector('#signUpContainer>p').style.display='block';
         document.querySelector('#signUpContainer>p').innerHTML=`&#9888; &nbsp; Please, provide below details`;
     }
@@ -122,7 +123,8 @@ for(let y of listOfBtn){
 
 
 //Adding listener for sign up
-signUp.addEventListener('click',()=>{signUpUser()})
+signUp.addEventListener('click',signUpUser)
+
 
 /* ------Sign in functionality ------*/
 
