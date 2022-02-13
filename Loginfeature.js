@@ -44,7 +44,7 @@ function signUpUser(){
     //Creating user with email and password
     const pattern = /^([6-9][0-9]{9})$/;
     const emailValidate = /^([a-zA-Z0-9/.-]+)@([a-zA-Z0-9/.-]+).([a-zA-Z]{2,20})(.[a-zA-Z])?$/;
-    const nameValidate = /[a-zA-Z]{4,30}/;
+    const nameValidate = /^([a-zA-Z]{4,30})$/;
     if(email && password && name && phoneNumber){
       if(navigator.onLine){
         document.querySelector('#signUpContainer>p').style.display="none";
